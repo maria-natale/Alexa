@@ -1,0 +1,52 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-03-09 14:20+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: lambda/py/alexa/data.py:4
+msgid ""
+"Welcome, you can learn about connected devices on your network or ask for "
+"help. What do you want to know?"
+msgstr ""
+
+#: lambda/py/alexa/data.py:5
+msgid "You can say give me the connected devices"
+msgstr ""
+
+#: lambda/py/alexa/data.py:6
+msgid "Goodbye!"
+msgstr ""
+
+#: lambda/py/alexa/data.py:7
+msgid "You just triggered {}"
+msgstr ""
+
+#: lambda/py/alexa/data.py:8
+msgid "Sorry, I had trouble doing what you asked. Please try again."
+msgstr ""
+
+#: lambda/py/alexa/data.py:9
+msgid "There are {} devices on your network"
+msgstr ""
+
+#: lambda/py/alexa/data.py:10
+msgid "Device {} with name: {} and ip: {}"
+msgstr ""
+
+#: lambda/py/alexa/data.py:11
+msgid "No devices found"
+msgstr ""
