@@ -1,0 +1,71 @@
+{
+  "deploy_settings": {
+    "maria98": {
+      "skill_id": "amzn1.ask.skill.6a1eadd6-8ef9-40f3-9d7c-9b1402a49dd5",
+      "resources": {
+        "lambda": [
+          {
+            "functionName": "",
+            "alexaUsage": [
+              "custom/default"
+            ],
+            "runtime": "python3.6",
+            "handler": "hello_world.handler"
+          }
+        ],
+        "manifest": {
+          "eTag": "e70dc5aff937ab9a82c870916b581be8"
+        },
+        "interactionModel": {
+          "de-DE": {
+            "eTag": "1d151df8a119d2df54ed68eccd757c02"
+          },
+          "en-CA": {
+            "eTag": "ce3addb53363153e917a625f13873942"
+          },
+          "en-AU": {
+            "eTag": "bb0c3152013b4e796b050b74ddcb2c6e"
+          },
+          "en-IN": {
+            "eTag": "c8e8145456a6bff68530987ab7e66cd3"
+          },
+          "en-GB": {
+            "eTag": "e03922108446ccf68d0827442eee82b6"
+          },
+          "es-ES": {
+            "eTag": "8d2db0929c90956772ca83333b9090aa"
+          },
+          "en-US": {
+            "eTag": "5b7f7e8851b0bfca52e001fb158735b8"
+          },
+          "es-US": {
+            "eTag": "df61453c4bbc8a2872b65494e5106a07"
+          },
+          "hi-IN": {
+            "eTag": "3c3ee5b056bd42bef591e1ef47887bae"
+          },
+          "es-MX": {
+            "eTag": "f9501d96d9349e1bf51cfad6c49a2230"
+          },
+          "fr-FR": {
+            "eTag": "fba85ebaa6463c47f664b14e7660f08e"
+          },
+          "ja-JP": {
+            "eTag": "78597ababbe127ddc0f2e2de3ee905d2"
+          },
+          "fr-CA": {
+            "eTag": "1bce45743f7ae78f0804156a9075eb1a"
+          },
+          "pt-BR": {
+            "eTag": "cd507b61e57f899d970b81cc58fd024e"
+          },
+          "it-IT": {
+            "eTag": "bc3370a31f3b1d95c7a4650e6e648a5a"
+          }
+        }
+      },
+      "was_cloned": false,
+      "merge": {}
+    }
+  }
+}

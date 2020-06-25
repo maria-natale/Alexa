@@ -1,0 +1,24 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+    
+            {
+                "type": "python",
+                "request": "launch",
+                "name": "Launch Program",
+                // Specify path to the downloaded local adapter(for python) file
+                "program": "C:/Users/maria/Documents/VisualStudioCodeWorkspace/trova-dispositivi/local_debugger.py",
+                "args": [
+                    // port number on your local host where the alexa requests will be routed to
+                    "--portNumber", "3001",
+                    // name of your python main skill file
+                    "--skillEntryFile", "./lambda/py/lambda_function.py",
+                    // name of your lambda handler
+                    "--lambdaHandler", "handler"
+                ],
+            }
+    ]
+}

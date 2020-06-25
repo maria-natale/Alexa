@@ -1,0 +1,51 @@
+{
+	"interactionModel": {
+		"languageModel": {
+			"invocationName": "network monitoring",
+			"intents": [
+				{
+					"name": "AMAZON.CancelIntent",
+					"samples": []
+				},
+				{
+					"name": "AMAZON.HelpIntent",
+					"samples": []
+				},
+				{
+					"name": "AMAZON.StopIntent",
+					"samples": []
+				},
+				{
+					"name": "RetrieveDevicesIntent",
+					"slots": [],
+					"samples": [
+						"find connected devices in my network",
+						"tell me connected devices in my network",
+						"give me connected devices in my network"
+					]
+				},
+				{
+					"name": "AllDevicesIntent",
+					"slots": [],
+					"samples": [
+						"list all devices",
+						"tell me all devices",
+						"give me complete list",
+						"give me complete list of devices",
+						"tell me complete list of devices",
+						"give me all connected devices in my network"
+					  ]
+				},
+				{
+					"name": "AMAZON.NavigateHomeIntent",
+					"samples": []
+				},
+				{
+					"name": "AMAZON.FallbackIntent",
+					"samples": []
+				}
+			],
+			"types": []
+		}
+	}
+}

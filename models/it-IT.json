@@ -1,0 +1,50 @@
+{
+	"interactionModel": {
+		"languageModel": {
+			"invocationName": "monitoraggio rete",
+			"intents": [
+				{
+					"name": "AMAZON.CancelIntent",
+					"samples": []
+				},
+				{
+					"name": "AMAZON.HelpIntent",
+					"samples": []
+				},
+				{
+					"name": "AMAZON.StopIntent",
+					"samples": []
+				},
+				{
+					"name": "RetrieveDevicesIntent",
+					"slots": [],
+					"samples": [
+						"trova i dispositivi connessi alla mia rete",
+						"dimmi i dispositivi connessi alla mia rete",
+						"quali sono i dispositivi connessi alla mia rete",
+						"dammi i dispositivi connessi",
+						"dammi i dispositivi connessi alla mia rete"
+					  ]
+				},
+				{
+					"name": "AllDevicesIntent",
+					"slots": [],
+					"samples": [
+						"elencami tutti i dispositivi",
+						"dimmi tutti i dispositivi",
+						"quali sono tutti i dispositivi",
+						"dammi l'elenco completo",
+						"dammi la lista completa dei dispositivi",
+						"dammi l'elenco completo dei dispositivi",
+						"dammi tutti i dispositivi connessi alla mia rete"
+					  ]
+				},
+				{
+					"name": "AMAZON.NavigateHomeIntent",
+					"samples": []
+				}
+			],
+			"types": []
+		}
+	}
+}

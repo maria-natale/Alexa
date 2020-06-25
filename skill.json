@@ -1,0 +1,92 @@
+{
+  "manifest": {
+    "publishingInformation": {
+      "locales": {
+        "en-US": {
+          "name": "trova-dispositivi",
+          "summary": "Sample Short Description",
+          "description": "Sample Full Description",
+          "examplePhrases": [
+            "Alexa open network monitoring",
+            "give me connected devices",
+            "help"
+          ],
+          "keywords": []
+        },
+        "en-GB": {
+          "name": "trova-dispositivi",
+          "summary": "Sample Short Description",
+          "description": "Sample Full Description",
+          "examplePhrases": [
+            "Alexa open network monitoring",
+            "give me connected devices",
+            "help"
+          ],
+          "keywords": []
+        },
+        "en-CA": {
+          "name": "trova-dispositivi",
+          "summary": "Sample Short Description",
+          "description": "Sample Full Description",
+          "examplePhrases": [
+            "Alexa open network monitoring",
+            "give me connected devices",
+            "help"
+          ],
+          "keywords": []
+        },
+        "en-IN": {
+          "name": "trova-dispositivi",
+          "summary": "Sample Short Description",
+          "description": "Sample Full Description",
+          "examplePhrases": [
+            "Alexa open network monitoring",
+            "give me connected devices",
+            "help"
+          ],
+          "keywords": []
+        },
+        "en-AU": {
+          "name": "trova-dispositivi",
+          "summary": "Sample Short Description",
+          "description": "Sample Full Description",
+          "examplePhrases": [
+            "Alexa open network monitoring",
+            "give me connected devices",
+            "help"
+          ],
+          "keywords": []
+        },
+        "it-IT": {
+          "name": "trova-dispositivi",
+          "summary": "Sample Short Description",
+          "description": "Sample Full Description",
+          "examplePhrases": [
+            "Alexa apri monitoraggio rete",
+            "dammi i dispositivi connessi",
+            "aiuto"
+          ],
+          "keywords": []
+        }
+      },
+      "isAvailableWorldwide": true,
+      "testingInstructions": "Sample Testing Instructions.",
+      "category": "KNOWLEDGE_AND_TRIVIA",
+      "distributionCountries": []
+    },
+    "apis": {
+      "custom": {
+        "endpoint": {
+          "uri": "https://cd184be64eac.ngrok.io",
+          "sslCertificateType": "Wildcard"
+        }
+      }
+    },
+    "manifestVersion": "1.0",
+    "permissions": [
+      {
+        "name": "alexa::alerts:reminders:skill:readwrite"
+      }
+    ]
+  }
+}
