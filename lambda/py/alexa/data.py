@@ -14,3 +14,4 @@ SERVER_ERR = _("Sorry, the requested data is not currently availables.")
 FIRST_DEVICES = _("I will list the first three devices, but you can ask to get the complete list.")
 ALL_DEVICES = _("So there is the list of all the devices in your network.")
 ONE_DEVICE = _("There is one device in your network.")
+

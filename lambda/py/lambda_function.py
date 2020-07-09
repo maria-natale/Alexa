@@ -7,7 +7,7 @@
 import logging
 import gettext
 
-from ask_sdk_core.skill_builder import SkillBuilder, CustomSkillBuilder
+from ask_sdk_core.skill_builder import SkillBuilder
 from ask_sdk_core.dispatch_components import (
     AbstractRequestHandler, AbstractRequestInterceptor, AbstractExceptionHandler)
 import ask_sdk_core.utils as ask_utils
@@ -30,21 +30,17 @@ import datetime
 
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
-REQUIRED_PERMISSIONS = ["alexa::alerts:reminders:skill:readwrite"]
-TIME_ZONE_ID = 'Europe/Rome'
 
 class LaunchRequestHandler(AbstractRequestHandler):
     """Handler for Skill Launch."""
 
     def can_handle(self, handler_input):
         # type: (HandlerInput) -> bool
-
         return ask_utils.is_request_type("LaunchRequest")(handler_input)
 
     def handle(self, handler_input):
         # type: (HandlerInput) -> Response
-        _ = handler_input.attributes_manager.request_attributes["_"]
-        
+        _ = handler_input.attributes_manager.request_attributes["_"]        
         speak_output = _(data.WELCOME_MESSAGE)
 
         return (
@@ -144,6 +140,26 @@ class AllDevicesIntentHandler(AbstractRequestHandler):
                     for i, device in enumerate(devices):
                         speak_output+= _(data.DEVICE_MSG).format(i+1,device.hostname, device.address)
                         speak_output+='<break time="1s"/> '
+        else:
+            r=requests.get("http://localhost:8080/RetrieveDevices/RetrieveDevicesServlet")
+            if r.status_code==200:
+                devices=extract_devices(r)
+
+                if devices is None:
+                    speak_output+=_(data.SERVER_ERR)+"\n"
+                else:
+                    if len(devices)>0:
+                        if len(devices)==1:
+                            speak_output+=_(data.ONE_DEVICE)+"\n"
+                        else:
+                            speak_output+=_(data.NUMBER_DEV_MSG).format(len(devices))+"\n"
+                        for i, device in enumerate(devices):
+                            speak_output+= _(data.DEVICE_MSG).format(i+1,device.hostname, device.address)
+                            speak_output+='<break time="1s"/> '
+                    else:
+                        speak_output=_(data.NO_DEVICES_MSG)
+            else:
+                speak_output=_(data.NETWORK_ERR)
 
         return (
             handler_input.response_builder
@@ -263,7 +279,6 @@ class LocalizationInterceptor(AbstractRequestInterceptor):
     """
     Add function to request attributes, that can load locale specific data
     """
-
     def process(self, handler_input):
         locale = handler_input.request_envelope.request.locale
         os.environ['LANGUAGE']=locale
@@ -276,8 +291,7 @@ class LocalizationInterceptor(AbstractRequestInterceptor):
 # defined are included below. The order matters - they're processed top to bottom.
 
 
-#sb = SkillBuilder()
-sb = CustomSkillBuilder(api_client=DefaultApiClient())  # required to use remiders
+sb = SkillBuilder()
 
 sb.add_request_handler(LaunchRequestHandler())
 sb.add_request_handler(RetrieveDevicesIntentHandler())
